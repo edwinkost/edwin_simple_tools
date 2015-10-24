@@ -53,10 +53,10 @@ if date_yyyy_mm_dd == None:
                                                   variable_name,\
                                                   clone_map_filename)
 else:                                                  
-    map_value = vos.netcdf2PCRobjCloneWithoutTime(input_netcdf_filename,\
-                                                  variable_name,\
-                                                  date_yyyy_mm_dd,\
-                                                  clone_map_filename)
+    map_value = vos.netcdf2PCRobjClone(input_netcdf_filename,\
+                                       variable_name,\
+                                       date_yyyy_mm_dd,\
+                                       clone_map_filename)
     
 # save the map as pcraster map
 pcr.report(map_value, output_pcraster_filename+".map")
