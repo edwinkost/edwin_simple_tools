@@ -26,7 +26,7 @@ output_pcraster_filename = sys.argv[3]
 
 # set variable_name
 variable_name = None
-if len(sys.argv) > 2: variable_name = sys.argv[4]
+if len(sys.argv) > 3: variable_name = sys.argv[4]
 if variable_name == None: 
     # loop through variables keys and identify the first variable 
     variable_names = f.variables.keys()
@@ -40,12 +40,12 @@ if variable_name == None:
     variable_names.pop('time','')
     # use the first variable
     variable_name = str(variable_names[0])
-msg = 'Converting '+variable_name+' from the pcraster file: '+input_netcdf_filename+' to '+output_pcraster_filename
+msg = 'Converting '+variable_name+' from the file:'+input_netcdf_filename+' to '+output_pcraster_filename
 print msg    
 
 # set date_yyyy_mm_dd
 date_yyyy_mm_dd = None
-if len(sys.argv) > 3: date_yyyy_mm_dd = sys.argv[5]
+if len(sys.argv) > 4: date_yyyy_mm_dd = sys.argv[5]
 
 # read netcdf file
 if date_yyyy_mm_dd == None:
