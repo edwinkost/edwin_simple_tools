@@ -59,4 +59,4 @@ else:
                                        clone_map_filename)
     
 # save the map as pcraster map
-pcr.report(map_value, output_pcraster_filename+".map")
+pcr.report(map_value, output_pcraster_filename)
